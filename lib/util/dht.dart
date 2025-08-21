@@ -7,14 +7,9 @@ import 'package:crypto/crypto.dart';
 import 'package:fast_log/fast_log.dart';
 
 class DHTConnect {
-  Future<void> broadcast({
-    required String key,
-    required String findKey,
-    int port = 6881,
-  }) async {
+  Future<void> broadcast({required String key, int port = 6881}) async {
     DHT dht = DHT();
     String h = blinkHash(key);
-    String hf = blinkHash(findKey);
     warn(
       "Starting DHT broadcast for key: $key on port: $port SHA1 (hex) = ${sha1.convert(utf8.encode(key)).toString()}",
     ); // Print hex for readability
@@ -27,7 +22,7 @@ class DHTConnect {
           "+ Peer ${event.address.addressString}:${event.address.port} [${event.infoHash}]",
         );
 
-        if (event.infoHash == hf) {
+        if (event.infoHash == h) {
           success("  +++ PEER FOUND!");
           connectToPeer(
             event.address.addressString,

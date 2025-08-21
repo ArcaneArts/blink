@@ -5,7 +5,7 @@ import 'package:blink/util/signal.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 Future<void> main() async {
-  await DHTConnect().broadcast(key: "dan", findKey: "aidan");
+  await DHTConnect().broadcast(key: "dan");
   await Hive.initFlutter("blink");
   await BlinkSignal.instance;
   runApp("blink", BlinkApplication());
