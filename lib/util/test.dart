@@ -30,12 +30,6 @@ Future<void> _simulateMobileUsage(MobileP2PNode node) async {
   print(cid);
   print('\n=== Mobile P2P Node Usage Simulation ===');
 
-  // Initial network stats
-  for (int i = 0; i < 30; i++) {
-    await node.printNetworkStats();
-    await Future.delayed(Duration(seconds: 5));
-  }
-
   // Simulate finding some content
   print('\n--- Simulating content discovery ---');
   await node.findContentProviders(cid.toString(), maxProviders: 2);
@@ -47,6 +41,12 @@ Future<void> _simulateMobileUsage(MobileP2PNode node) async {
   // Simulate finding a service
   print('\n--- Simulating service discovery ---');
   await node.findServiceProviders('mobile-chat-service', maxPeers: 2);
+
+  // Initial network stats
+  for (int i = 0; i < 30; i++) {
+    await node.printNetworkStats();
+    await Future.delayed(Duration(seconds: 5));
+  }
 
   // Simulate app going to background (pause background tasks)
   print('\n--- Simulating app backgrounding ---');
