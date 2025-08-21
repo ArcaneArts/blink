@@ -2,36 +2,13 @@ import 'dart:convert';
 import 'dart:typed_data';
 
 import 'package:blink/util/mnode.dart';
-import 'package:dart_libp2p/core/alias.dart';
 import 'package:dcid/dcid.dart';
 
 Future<void> test() async {
   MobileP2PNode node = MobileP2PNode();
   try {
     // Initialize the mobile node
-    await node.initialize(
-      bootstrapPeers: [
-        MultiAddr(
-          '/dnsaddr/bootstrap.libp2p.io/p2p/QmNnooDu7bfjPFoTZYxMNLWUQJyrVwtbZg5gBMjTezGAJN',
-        ),
-        MultiAddr(
-          '/dnsaddr/bootstrap.libp2p.io/p2p/QmQCU2EcMqAqQPR2i9bChDtGNJchTbq5TbXNB4MoZtXm96',
-        ),
-        MultiAddr(
-          '/dnsaddr/bootstrap.libp2p.io/p2p/QmbLHAnMoJPWSCR5Zhtx6BHJX9KiKNN6tpvbUcqanj75Nb',
-        ),
-        MultiAddr(
-          '/dnsaddr/bootstrap.libp2p.io/p2p/QmcZf59bWwK5XFi76C42gEOzDRvPDc5G4SrPXxm4Z1Wje7',
-        ),
-        MultiAddr(
-          '/dnsaddr/bootstrap.libp2p.io/p2p/QmZa1sAxajnQjVM8WjWXoMbmPd7NsWhfKsPkErzpm9wGkp',
-        ),
-        MultiAddr(
-          '/dnsaddr/bootstrap.libp2p.io/p2p/12D3KooWEyoppNCUx8FDIcokCKnTasm3Z6WGRYWTpW9NsADYu4h6',
-        ),
-      ], // Additional reliable one],
-      enableBackgroundRefresh: true,
-    );
+    await node.initialize(enableBackgroundRefresh: true);
 
     // Simulate mobile app lifecycle
     await _simulateMobileUsage(node);
