@@ -33,6 +33,9 @@ class DHTConnect {
         }
       } else if (event is NewNodeAdded) {
         network("+ Node ${event.node.address?.toString()}:${event.node.port}");
+      } else if (event is AnnouncePeerResponseEvent) {
+        AnnouncePeerResponseEvent e = event as AnnouncePeerResponseEvent;
+        verbose("+ APRE ${e.address.toString()} -- ?${e.data}");
       } else if (event is NodeRemoved) {
         warn(
           "- Node ${(event as NodeRemoved).node.address?.toString()}:${(event as NodeRemoved).node.port}",
