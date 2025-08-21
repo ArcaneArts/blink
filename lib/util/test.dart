@@ -42,8 +42,11 @@ Future<void> _simulateMobileUsage(MobileP2PNode node) async {
   print('\n--- Simulating service discovery ---');
   await node.findServiceProviders('mobile-chat-service', maxPeers: 2);
 
+  print("Bootstrap?");
+  await node.dht.bootstrap();
+  print("Bootstrapped?");
   // Initial network stats
-  for (int i = 0; i < 30; i++) {
+  for (int i = 0; i < 60; i++) {
     await node.printNetworkStats();
     await Future.delayed(Duration(seconds: 5));
   }
