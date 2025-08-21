@@ -51,7 +51,7 @@ class DHTConnect {
       dht.requestPeers(h);
     });
 
-    await Future.delayed(Duration(minutes: 10));
+    await Future.delayed(Duration(minutes: 1000));
   }
 
   String blinkHash(String input) {
