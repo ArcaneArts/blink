@@ -89,6 +89,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.0"
+  b_encode_decode:
+    dependency: transitive
+    description:
+      name: b_encode_decode
+      sha256: "2382dc245ee57c28264bf2d0cb63404d7053f032039df85366999b04353a7289"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.4"
   base32:
     dependency: transitive
     description:
@@ -113,6 +121,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.7.0"
+  bittorrent_dht:
+    dependency: "direct main"
+    description:
+      name: bittorrent_dht
+      sha256: "6be7710a9e48fc43a72a9e6311d98a1bb328d8d73b0eeac84e5c9d6665479d24"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.12"
   bluetooth_low_energy:
     dependency: "direct main"
     description:
@@ -521,6 +537,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.0"
+  dtorrent_common:
+    dependency: transitive
+    description:
+      name: dtorrent_common
+      sha256: a0fbcedfc65546415bab9260e110922456e76d1ca4c804e3682fc21e5a1b31aa
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.7"
   ed25519_edwards:
     dependency: transitive
     description:
@@ -545,6 +569,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.7"
+  events_emitter2:
+    dependency: transitive
+    description:
+      name: events_emitter2
+      sha256: "1d2f7b249491e9a143a18992c9a500fc21ac5e271e59e157c12193553ccd3d57"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.4"
   expressions:
     dependency: transitive
     description:

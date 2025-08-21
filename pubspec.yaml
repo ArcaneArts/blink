@@ -26,6 +26,7 @@ dependencies:
   dart_libp2p_kad_dht: ^1.1.0
   dart_libp2p: ^0.5.3
   dcid: ^1.0.0
+  bittorrent_dht: ^0.0.12
 dependency_overrides:
   pointycastle: ^4.0.0
   protobuf: ^4.0.0
